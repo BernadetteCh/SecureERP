@@ -140,3 +140,14 @@ footer a:hover {
   color: #015c93;
   text-decoration: none;
 }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: #2a2727;
+  border: none;
+  padding: 4px 12px 4px 12px;
+  border-radius: 12px;
+  margin-left: 12px;
+}

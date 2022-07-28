@@ -247,6 +247,7 @@ window.salesController = (() => {
         },
       },
     ];
+
     view.printMenu("Sales", options);
   }
 

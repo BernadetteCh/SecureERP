@@ -66,6 +66,7 @@ window.view = (() => {
       const listItemNode = document.createElement("li");
       const buttonNode = document.createElement("button");
       buttonNode.innerText = listOptions[i].title;
+
       //Ask for innerText to add ClassList to style specific buttons
       if (buttonNode.innerText === "Customer Relationship Management (CRM)") {
         buttonNode.classList.add("crmButton");
