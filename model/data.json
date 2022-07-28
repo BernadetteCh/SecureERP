@@ -1,0 +1,81 @@
+{
+    "sales": [
+        {
+            "id": "l4x__QmU8r",
+            "customerId": "k0_JUq+8hk",
+            "product": "Bazooka",
+            "price": 100,
+            "transactionDate": "2017-04-30"
+        },
+        {
+            "id": "Hcik9!_o2T",
+            "customerId": "P7+5Ggza!n",
+            "product": "Sidewinder",
+            "price": 1500,
+            "transactionDate": "2018-02-02"
+        },
+        {
+            "id": "N41z-Dgcz-",
+            "customerId": "k0_JUq+8hk",
+            "product": "Bazooka",
+            "price": 843.4,
+            "transactionDate": "2018-05-24"
+        },
+        {
+            "id": "TiA9s!8n-c",
+            "customerId": "l4x__QmU8r",
+            "product": "Grenade",
+            "price": 22,
+            "transactionDate": "2019-09-13"
+        }
+    ],
+    "customers": [
+        {
+            "id": "pF5v4wG_e_",
+            "name": "Dr. Strangelove",
+            "email": "strangelove@rgv453.grer",
+            "subscribed": true
+        },
+        {
+            "id": "k0_JUq+8hk",
+            "name": "Kim",
+            "email": "supremeleader@dfs.vfsdfv",
+            "subscribed": false
+        },
+        {
+            "id": "l4x__QmU8r",
+            "name": "Unknown",
+            "email": "---",
+            "subscribed": false
+        },
+        {
+            "id": "P7+5Ggza!n",
+            "name": "Known",
+            "email": "ping@me",
+            "subscribed": true
+        }
+    ],
+    "humanresources": [
+        {
+            "id": "Jz6J5&jw",
+            "name": "Alice",
+            "birthday": "2000-01-01",
+            "department": "Sales",
+            "clearance": 3
+        },
+        {
+            "id": "45+ohJm&dB",
+            "name": "Bob",
+            "birthday": "1989-10-13",
+            "department": "Production",
+            "clearance": 6
+        },
+        {
+            "id": "ßl0W_tbm5Z",
+            "name": "Cecil",
+            "birthday": "1993-04-04",
+            "department": "Sales",
+            "clearance": 5
+        }
+    ]
+}

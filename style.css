@@ -1,0 +1,142 @@
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#menu {
+  margin-top: 28px;
+}
+#message {
+  color: teal;
+}
+
+#error-message {
+  color: red;
+}
+
+#menu li {
+  margin-bottom: 0.5em;
+  list-style: none;
+  margin: 18px;
+}
+
+.styleOutput {
+  margin-bottom: 10px;
+}
+
+.keyOfCustomerList {
+  font-weight: bold;
+}
+
+h2 {
+  color: #2a2727;
+  margin-bottom: 16px;
+}
+td {
+  padding: 5px 12px 5px 12px;
+  background-color: #edf2fb;
+  color: #686b73;
+}
+th {
+  padding: 4px 12px 4px 12px;
+  background: #d7e3fc;
+  color: #2a2727;
+}
+table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  margin-bottom: 60px;
+  box-shadow: 8px -5px 7px -1px rgba(195, 195, 195, 0.8);
+}
+li button {
+  color: #2a2727;
+  border: none;
+  padding: 4px 12px 4px 12px;
+  border-radius: 12px;
+}
+h1 span {
+  font-weight: bold;
+  color: #03989e;
+}
+footer span {
+  color: #03989e;
+}
+footer {
+  letter-spacing: 1px;
+  color: rgb(42, 39, 39, 0.6);
+  position: relative;
+  bottom: 0px;
+}
+footer a {
+  color: rgb(42, 39, 39, 0.6);
+}
+h1 {
+  color: #2a2727;
+  letter-spacing: 2px;
+}
+.fa-brands {
+  font-size: 18px;
+  color: #015c93;
+}
+.crmButton {
+  color: #015c93;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #edf2fb;
+  font-weight: bold;
+  border: none;
+  transition: all 200ms ease;
+}
+.salesButton {
+  color: #015c93;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #d7e3fc;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 160px;
+  border: none;
+  transition: all 200ms ease;
+}
+
+.humanResourceButton {
+  color: #015c93;
+  padding: 8px 110px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #abc4ff;
+  font-weight: bold;
+  border: none;
+  transition: all 200ms ease;
+}
+.crmButton:hover {
+  border: 2px solid transparent;
+  background-color: rgb(255, 255, 255);
+  transform: scal e(1.05);
+  color: #03989e;
+  will-change: transform;
+}
+.salesButton:hover {
+  border: 2px solid transparent;
+  background-color: white;
+  transform: scal e(1.05);
+  color: #03989e;
+  will-change: transform;
+}
+
+.humanResourceButton:hover {
+  border: 2px solid transparent;
+  background-color: rgb(255, 255, 255);
+  color: #03989e;
+  transform: scal e(1.05);
+
+  will-change: transform;
+}
+
+footer a:hover {
+  color: #015c93;
+  text-decoration: none;
+}
