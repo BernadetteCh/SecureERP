@@ -1,4 +1,12 @@
 window.view = (() => {
+
+  function clearView (){
+    document.getElementById("message").innerHTML = "";
+    document.getElementById("error-message").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("inputDiv").innerHTML = "";
+  }
+
   function printErrorMessage(message) {
     const messageBox = document.getElementById("error-message");
     messageBox.innerText = message;
@@ -20,6 +28,7 @@ window.view = (() => {
   }
 
   function printTable(table, title) {
+    //clearView();
     let counter = 0;
     let myTable = document.createElement("table");
     let h2 = document.createElement("h2");
@@ -29,6 +38,7 @@ window.view = (() => {
     tableRowH.id = "tableHeader";
     myTable.appendChild(tableRowH);
     let resultDiv = document.getElementById("result");
+    resultDiv.innerHTML="";
     resultDiv.appendChild(h2);
     resultDiv.appendChild(myTable);
     table.forEach(function (value, index) {
@@ -58,15 +68,17 @@ window.view = (() => {
   }
 
   function printMenu(title, listOptions) {
+    clearView ();
     const menuNode = document.getElementById("menu");
-    const titleNode = document.createElement("h1");
-    titleNode.innerText = title;
+    menuNode.innerHTML="";
+    //const titleNode = document.createElement("h1");
+    //titleNode.innerText = title;
     const listNode = document.createElement("ul");
+    listNode.setAttribute("id",title);
     for (let i = 0; i < listOptions.length; i++) {
       const listItemNode = document.createElement("li");
       const buttonNode = document.createElement("button");
       buttonNode.innerText = listOptions[i].title;
-
       //Ask for innerText to add ClassList to style specific buttons
       if (buttonNode.innerText === "Customer Relationship Management (CRM)") {
         buttonNode.classList.add("crmButton");
@@ -74,9 +86,11 @@ window.view = (() => {
       if (buttonNode.innerText === "Sales") {
         buttonNode.classList.add("salesButton");
       }
-
       if (buttonNode.innerText === "Human Resources") {
         buttonNode.classList.add("humanResourceButton");
+      }
+      if (buttonNode.innerText === "Back to main menu"){
+        buttonNode.setAttribute("class","backButton");
       }
 
       buttonNode.onclick = listOptions[i].operation;

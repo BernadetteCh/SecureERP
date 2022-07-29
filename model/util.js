@@ -101,7 +101,7 @@ window.util = (() => {
           );
           List[i].transactionDate = newTransactionDate;
         }
-      } else console.log("This ID does not exist!");
+      } else alert("This ID does not exist!");
     }
     return List;
   }

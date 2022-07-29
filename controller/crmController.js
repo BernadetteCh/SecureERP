@@ -73,7 +73,7 @@ window.crmController = (() => {
         console.log(customersList[i]);
         customersList.splice([i], 1);
         dataManager.writeTableToStore("customers", customersList);
-      } else console.log("This ID does not exist!");
+      }
     }
     console.log(customersList);
   }
@@ -85,7 +85,7 @@ window.crmController = (() => {
         myCustomersEmails.push(customersList[i].email);
       }
     }
-    console.log(myCustomersEmails); //XXXX JS: WIe sollen wir die Email Adressen ausgeben? Auch als Tabelle?
+    view.printMessage("subscribed Emails: "+myCustomersEmails);
   }
 
   function menu() {

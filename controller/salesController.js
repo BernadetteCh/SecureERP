@@ -71,7 +71,7 @@ window.salesController = (() => {
     });
     let p = document.createElement("p");
     p.innerText = biggestPrice;
-
+    document.getElementById("result").innerHTML="";
     document.getElementById("result").appendChild(p);
   }
 
@@ -111,6 +111,7 @@ window.salesController = (() => {
 
     let p = document.createElement("p");
     p.innerText = productName + ": " + biggestSum;
+    document.getElementById("result").innerHTML = "";
     document.getElementById("result").appendChild(p);
   }
 
@@ -126,6 +127,7 @@ window.salesController = (() => {
     submit.addEventListener("click", submitButton);
 
     let inputDiv = document.getElementById("inputDiv");
+    inputDiv.innerHTML = "";
     inputDiv.appendChild(input1);
     inputDiv.appendChild(input2);
     inputDiv.appendChild(submit);
@@ -164,6 +166,7 @@ window.salesController = (() => {
     submit.addEventListener("click", submitButton);
 
     let inputDiv = document.getElementById("inputDiv");
+    inputDiv.innerHTML = "";
     inputDiv.appendChild(input1);
     inputDiv.appendChild(input2);
     inputDiv.appendChild(submit);
@@ -186,6 +189,7 @@ window.salesController = (() => {
       });
       let p = document.createElement("p");
       p.innerText = "Sum of Orders between: " + sum;
+      document.getElementById("result").innerHTML = "";
       document.getElementById("result").appendChild(p);
     }
   }

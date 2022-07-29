@@ -31,20 +31,19 @@ window.hrController = (() => {
 
     dataManager.writeTableToStore("humanresources", employeeList);
   }
+  
   function updateEmployee() {
-    let employeeIDInput = prompt(
-      "Please enter the ID of the employee, whose data you want to update!",
-      "Employee-ID"
-    );
-    let itemToUpdate = prompt(
-      "Which data do you want to update? (Pls write one of the following: birthday, department, clearance. Note: If you want to change everything, pls remove this entry and create a new entry!",
-      "select: name, birthday, department, clearance"
-    );
+    let employeeIDInput = prompt (
+      "Please enter the ID of the employee, whose data you want to update!", "Employee-ID");
+    let itemToUpdate = prompt (
+      "Which data do you want to update? (Pls write one of the following: birthday, department, clearance. Note: If you want to change everything, pls remove this entry and create a new entry!", 
+      "select: name, birthday, department, clearance");
 
     util.updateRow(employeeList, employeeIDInput, itemToUpdate);
 
     dataManager.writeTableToStore("humanresources", employeeList);
   }
+
   function deleteEmployee() {
     let employeeIDInput = prompt(
       "Please enter the ID of the employee, whose data you want to delete!",
@@ -148,18 +147,45 @@ window.hrController = (() => {
         //   daysToBirthday +
         //   " days.";
       } else {
-        view.printMessage(`No Birthday in the next 2 weeks`);
+        view.printMessage("No Birthday in the next 2 weeks");
         // p.innerText = "No Birthday in the next 2 weeks";
       }
       let divResult = document.getElementById("result");
       divResult.appendChild(p);
     }
   }
+  
   function countEmployeesWithClearance() {
-    view.printErrorMessage("Not implemented yet."); // - Raphael
+    let inputClearance = prompt (
+      "About what clearance level do you need information? Pls enter a number!", "1-7");
+    let employeeClearanceArray = [];
+    for (let i = 0; i<employeeList.length; i++){
+      if (employeeList[i].clearance === parseInt(inputClearance)){
+        employeeClearanceArray.push(employeeList[i].clearance);
+      }
+    } if (employeeClearanceArray.length !== 0){
+      alert ("This is the number of employees with this clearance level:  " + employeeClearanceArray.length);
+    } else if (employeeClearanceArray.length === 0)
+      {
+        alert ("There are no employees with this clearance level");
+      }
   }
+
   function countEmployeesPerDepartment() {
-    view.printErrorMessage("Not implemented yet."); // - Raphael
+    let departments = {};
+    counterSales= 0;
+    counterProduction = 0;
+
+    for (let i = 0; i<employeeList.length; i++){
+      if (employeeList[i].department === "Sales"){
+        counterSales++;
+        departments.Sales = counterSales;
+      }
+      if (employeeList[i].department === "Production"){
+        counterProduction++;
+        departments.Production = counterProduction;
+      }
+    }      alert ("This is the number of employees in each department: " + JSON.stringify(departments));
   }
 
   function menu() {

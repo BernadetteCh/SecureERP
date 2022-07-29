@@ -89,69 +89,14 @@ window.hrController = (() => {
     let divResult = document.getElementById("result");
     divResult.appendChild(p1);
     divResult.appendChild(p2);
-    //view.printMessage(`Next birthday: ${averageAge}`);
   }
   function getAverageAge() {
     let averageAge = util.getAge(employeeList);
     view.printMessage(`The average Age is: ${averageAge}`);
   }
   function nextBirthdays() {
-    let input = document.createElement("input");
-    let button = document.createElement("button");
-    button.type = "submit";
-    button.innerText = "submit";
-    input.type = "date";
-    input.id = "inputDate";
-    button.addEventListener("click", getBirthday);
-    let inputDiv = document.getElementById("inputDiv");
-    inputDiv.appendChild(input);
-    inputDiv.appendChild(button);
-
-    let twoWeeks = 14 * 24 * 60 * 60 * 1000;
-    //let oneYear = (365 * 24 * 60 * 60 * 1000);
-
-    function getBirthday() {
-      let foundBirhday = false;
-      let iYear = 0;
-      let newEmDate;
-      let days = 0;
-      let daysToBirthday = 0;
-      let iDate;
-      let employeeName = "";
-
-      inputDate = document.querySelector("#inputDate").value;
-      iDate = new Date(inputDate);
-      iYear = iDate.getFullYear();
-
-      employeeList.forEach((element) => {
-        const [yearE, monthE, dayE] = element.birthday.split("-");
-        newEmDate = iYear + "-" + monthE + "-" + dayE;
-        newEmDate = new Date(newEmDate);
-        days = newEmDate.getTime() - iDate.getTime();
-        if (days <= twoWeeks && days > 0) {
-          console.log("days " + days);
-          employeeName = element.name;
-          daysToBirthday = days;
-          foundBirhday = true;
-        }
-      });
-      daysToBirthday = daysToBirthday / 24 / 60 / 60 / 1000;
-      let p = document.createElement("p");
-      if (foundBirhday === true) {
-        p.innerText =
-          "Employee " +
-          employeeName +
-          " Birthday is in " +
-          daysToBirthday +
-          " days.";
-      } else {
-        p.innerText = `No Birthday in the next 2 weeks`;
-      }
-      let divResult = document.getElementById("result");
-      divResult.appendChild(p);
-    }
+    view.printErrorMessage("Not implemented yet."); // - Raphael
   }
-
   function countEmployeesWithClearance() {
     view.printErrorMessage("Not implemented yet."); // - Raphael
   }
